@@ -12,7 +12,7 @@
         </svg>
         <span>Exemplo slide infinite</span>
       </h2>
-      <SlideContent name="Exemplo 1" type="infinite" :nav="true">
+      <SlideContent name="Exemplo 1" type="infinite" :nav="true" :animation="{ 'disabled': true }">
         <SlideItem title="Ermelino Matarazzo" :img="require(`@/assets/ermelino.jpg`)" url="teste" />
         <SlideItem class="favela actived" title="Fé em Deus" :img="require(`@/assets/faveladascriancas.jpg`)" url="teste" />
       </SlideContent>
@@ -45,7 +45,7 @@
         </svg>
         <span></span>Exemplo slide simple navigation actived
       </h2>
-      <SlideContent name="Exemplo 3" type="simple" :nav="true">
+      <SlideContent name="Exemplo 3" type="simple" :nav="true" :animation="{ direction: 'prev', time: 1000 }">
         <SlideItem class="actived" title="Ermelino Matarazzo" :img="require(`@/assets/ermelino.jpg`)" url="teste" />
         <SlideItem title="Fé em Deus" :img="require(`@/assets/faveladascriancas.jpg`)" url="teste" />
       </SlideContent>

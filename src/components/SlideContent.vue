@@ -4,8 +4,8 @@
       <slot></slot>
     </div>
     <div class="slide-navigation">
-      <button v-if="nav" class="btn prev" type="button" name="button" @click="prev">Ir para a esquerda</button>
-      <button v-if="nav" class="btn next" type="button" name="button" @click="next">Ir para a direita</button>
+      <button v-if="nav" class="btn prev" type="button" name="button" @click="prevHandler">Ir para a esquerda</button>
+      <button v-if="nav" class="btn next" type="button" name="button" @click="nextHandler">Ir para a direita</button>
     </div>
   </section>
 </template>
@@ -18,12 +18,13 @@ export default {
     type: String,
     nav: Boolean
   },
-  mounted() {
-    console.log("Slide", this.name)
-    console.log(this.$slots)
+  created() {
+    setInterval(() => {
+      this.nextHandler()
+    }, 5000);
   },
   methods: {
-    prev() {
+    prevHandler() {
       let slides = this.$slots.default
 
       for(let item of slides) {
@@ -39,7 +40,7 @@ export default {
         }
       }
     },
-    next() {
+    nextHandler() {
       let slides = this.$slots.default
 
       for(let item of slides) {
