@@ -13,7 +13,8 @@ export default {
   props: {
     title: String,
     img: String,
-    url: String
+    url: String,
+    target: String
   }
 }
 </script>
