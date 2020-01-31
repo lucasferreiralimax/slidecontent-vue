@@ -1,4 +1,4 @@
-# slidecontent
+# SlideContent
 
 ## Project setup
 ```
