@@ -1,8 +1,12 @@
 <template>
   <section class="slide-content" :class="type">
-    <slot></slot>
-    <button v-if="nav" class="btn prev" type="button" name="button" @click="prev">Ir para a esquerda</button>
-    <button v-if="nav" class="btn next" type="button" name="button" @click="next">Ir para a direita</button>
+    <div class="slide-slots">
+      <slot></slot>
+    </div>
+    <div class="slide-navigation">
+      <button v-if="nav" class="btn prev" type="button" name="button" @click="prev">Ir para a esquerda</button>
+      <button v-if="nav" class="btn next" type="button" name="button" @click="next">Ir para a direita</button>
+    </div>
   </section>
 </template>
 
@@ -20,43 +24,35 @@ export default {
   },
   methods: {
     prev() {
-      console.log("Slide", this.name)
-      console.log("prev")
+      let slides = this.$slots.default
 
-      let slides = this.$el.querySelectorAll(".slide-item")
-      let slide = this.$el.querySelector(".slide-item.actived")
-
-      console.log(slides)
-      console.log(slide)
-
-      if(slide.previousElementSibling && slide.previousElementSibling.classList.contains("slide")) {
-        slide.classList.remove("actived")
-        slide.previousElementSibling.classList.add("actived")
-        console.log("IF")
-      } else {
-        console.log("ELSE")
-        slide.classList.remove("actived")
-        slides[slides.length - 1].classList.add("actived")
+      for(let item of slides) {
+        if(item.elm.classList.contains("actived")) {
+          if(item.elm.previousElementSibling) {
+            item.elm.classList.remove("actived")
+            item.elm.previousElementSibling.classList.add("actived")
+          } else {
+            item.elm.classList.remove("actived")
+            slides[slides.length - 1].elm.classList.add("actived")
+          }
+          break;
+        }
       }
     },
     next() {
-      console.log("Slide", this.name)
-      console.log("next")
+      let slides = this.$slots.default
 
-      let slides = this.$el.querySelectorAll(".slide-item")
-      let slide = this.$el.querySelector(".slide-item.actived")
-      console.log(slides)
-      console.log(slide)
-
-      if(slide.nextElementSibling && slide.nextElementSibling.classList.contains("slide")) {
-        slide.classList.remove("actived")
-        slide.nextElementSibling.classList.add("actived")
-        console.log("IF")
-
-      } else {
-        console.log("ELSE")
-        slide.classList.remove("actived")
-        slides[0].classList.add("actived")
+      for(let item of slides) {
+        if(item.elm.classList.contains("actived")) {
+          if(item.elm.nextElementSibling) {
+            item.elm.classList.remove("actived")
+            item.elm.nextElementSibling.classList.add("actived")
+            break;
+          } else {
+            item.elm.classList.remove("actived")
+            slides[0].elm.classList.add("actived")
+          }
+        }
       }
     }
   }
