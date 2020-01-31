@@ -16,14 +16,35 @@ export default {
   props: {
     name: String,
     type: String,
-    nav: Boolean
+    nav: Boolean,
+    animation: Object
   },
-  created() {
-    setInterval(() => {
-      this.nextHandler()
-    }, 5000);
-  },
+  created() { this.slideAnimation() },
   methods: {
+    slideAnimation() {
+      let slideAnimationInitial = setInterval(() => {
+        this.nextHandler()
+      }, 5000);
+
+      slideAnimationInitial
+
+      if(this.animation) {
+        clearInterval(slideAnimationInitial)
+        let slideAnimationOptions = setInterval(() => {
+          if(this.animation.direction == "prev") {
+            this.prevHandler()
+          } else {
+            this.nextHandler()
+          }
+        }, this.animation.time);
+
+        if(this.animation.disabled) {
+          clearInterval(slideAnimationOptions)
+        } else {
+          slideAnimationOptions
+        }
+      }
+    },
     prevHandler() {
       let slides = this.$slots.default
 
