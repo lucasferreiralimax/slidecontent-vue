@@ -1,5 +1,5 @@
 <template lang="pug">
-  article(class="slide-item")
+  article.slide-item
     a(:href="url" :target="target")
       h1(v-if="title") {{ title }}
       img(:src="img" :alt="title")
