@@ -1,7 +1,7 @@
 {
-  "name": "slidecontent",
+  "name": "@lucasferreiralimax/slidecontent",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -27,5 +27,6 @@
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "author": "lucasferreiralimax"
 }
