@@ -9,7 +9,7 @@
     </h3>
     <pre>
       <code v-pre>
-        <slot></slot>
+        <slot/>
       </code>
     </pre>
   </div>
@@ -17,6 +17,7 @@
 
 <script>
 export default {
+  name: 'SlideSource'
 }
 </script>
 

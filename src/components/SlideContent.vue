@@ -1,11 +1,11 @@
 <template>
   <section class="slide-content" :class="type">
     <div class="slide-slots">
-      <slot></slot>
+      <slot/>
     </div>
-    <div class="slide-navigation">
-      <button v-if="nav" class="btn prev" type="button" name="button" @click="prevHandler">Ir para a esquerda</button>
-      <button v-if="nav" class="btn next" type="button" name="button" @click="nextHandler">Ir para a direita</button>
+    <div class="slide-navigation" v-if="nav">
+      <button class="btn prev" type="button" name="button" @click="prevHandler">Ir para a esquerda</button>
+      <button class="btn next" type="button" name="button" @click="nextHandler">Ir para a direita</button>
     </div>
   </section>
 </template>
@@ -24,7 +24,7 @@ export default {
     slideAnimation() {
       let slideAnimationInitial = setInterval(() => {
         this.nextHandler()
-      }, 5000);
+      }, 6000);
 
       slideAnimationInitial
 
@@ -81,7 +81,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus">
 .slide-content
   color #000
@@ -90,6 +89,7 @@ export default {
   min-height 100vh
   overflow hidden
   position relative
+.slide-navigation
   .btn
     background #fff
     border-radius 100%
