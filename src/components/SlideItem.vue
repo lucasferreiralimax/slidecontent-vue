@@ -1,10 +1,8 @@
-<template>
-  <article class="slide-item">
-    <a :href="url" :target="target">
-      <h1 v-if="title">{{ title }}</h1>
-      <img :src="img" :alt="title">
-    </a>
-  </article>
+<template lang="pug">
+  article(class="slide-item")
+    a(:href="url" :target="target")
+      h1(v-if="title") {{ title }}
+      img(:src="img" :alt="title")
 </template>
 
 <script>

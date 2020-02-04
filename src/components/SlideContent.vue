@@ -1,13 +1,10 @@
-<template>
-  <section class="slide-content" :class="type">
-    <div class="slide-slots">
-      <slot/>
-    </div>
-    <div class="slide-navigation" v-if="nav">
-      <button class="btn prev" type="button" name="button" @click="prevHandler">Ir para a esquerda</button>
-      <button class="btn next" type="button" name="button" @click="nextHandler">Ir para a direita</button>
-    </div>
-  </section>
+<template lang="pug">
+  section(class="slide-content" :class="type")
+    div(class="slide-slots")
+      slot
+    div(class="slide-navigation" v-if="nav")
+      button(class="btn prev" type="button" name="button" @click="prevHandler") Ir para a esquerda
+      button(class="btn next" type="button" name="button" @click="nextHandler") Ir para a direita
 </template>
 
 <script>
