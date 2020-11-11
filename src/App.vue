@@ -56,9 +56,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@font-face
-  font-family "Deus"
-  src url(https://rimafavela.web.app/fonts/deus.0ea8c3f0.ttf),url(https://rimafavela.web.app/fonts/deus.87fcee5b.woff2),url(https://rimafavela.web.app/fonts/deus.94931b27.woff)
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 body
   margin 0
@@ -94,7 +92,7 @@ body
     fill #53b983
 .favela
   h1
-    font-family "Deus"
+    font-family 'Great Vibes', cursive
   img
     filter saturate(2) brightness(1.2)
 
