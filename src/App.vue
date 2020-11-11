@@ -13,7 +13,10 @@
         SlideItem(title="Ermelino Matarazzo" :img="require(`@/assets/ermelino.jpg`)" url="https://www.instagram.com/p/B7JoudZhHyv/" target="_blank")
         SlideItem.favela.actived(title="Fé em Deus" :img="require(`@/assets/faveladascriancas.jpg`)" url="https://www.instagram.com/p/B68pN_Ph9IZ" target="_blank")
       SlideSource
-        | teste
+        pre
+          | SlideContent(name="Exemplo 1" type="infinite" :nav="true" :animation="{ 'disabled': true }")
+          |   SlideItem(title="Ermelino Matarazzo" :img="require(`@/assets/ermelino.jpg`)" url="https://www.instagram.com/p/B7JoudZhHyv/" target="_blank")
+          |   SlideItem.favela.actived(title="Fé em Deus" :img="require(`@/assets/faveladascriancas.jpg`)" url="https://www.instagram.com/p/B68pN_Ph9IZ" target="_blank")
     .example
       h2.slide-title
         svg(viewBox="0 -21 511.987 511" width="50px" xmlns="http://www.w3.org/2000/svg")
@@ -24,7 +27,10 @@
         SlideItem.actived(title="Ermelino Matarazzo" :img="require(`@/assets/ermelino.jpg`)" url="https://www.instagram.com/p/B7JoudZhHyv/")
         SlideItem.favela(title="Fé em Deus" :img="require(`@/assets/faveladascriancas.jpg`)" url="https://www.instagram.com/p/B68pN_Ph9IZ")
       SlideSource
-        | teste
+        pre
+          | SlideContent(name="Exemplo 2" type="simple" :nav="false")
+          |   SlideItem.actived(title="Ermelino Matarazzo" :img="require(`@/assets/ermelino.jpg`)" url="https://www.instagram.com/p/B7JoudZhHyv/")
+          |   SlideItem.favela(title="Fé em Deus" :img="require(`@/assets/faveladascriancas.jpg`)" url="https://www.instagram.com/p/B68pN_Ph9IZ")
     .example
       h2.slide-title
         svg(xmlns="http://www.w3.org/2000/svg" width="60px" viewBox="0 0 94.294 94.294")
@@ -34,7 +40,10 @@
         SlideItem.actived(title="Ermelino Matarazzo" :img="require(`@/assets/ermelino.jpg`)" url="https://www.instagram.com/p/B7JoudZhHyv/" target="_blank")
         SlideItem.favela(title="Fé em Deus" :img="require(`@/assets/faveladascriancas.jpg`)" url="https://www.instagram.com/p/B68pN_Ph9IZ" target="_blank")
       SlideSource
-        | teste
+        pre
+          | SlideContent(name="Exemplo 3" type="simple" :nav="true" :animation="{ direction: 'prev', time: 10000 }")
+          |   SlideItem.actived(title="Ermelino Matarazzo" :img="require(`@/assets/ermelino.jpg`)" url="https://www.instagram.com/p/B7JoudZhHyv/" target="_blank")
+          |   SlideItem.favela(title="Fé em Deus" :img="require(`@/assets/faveladascriancas.jpg`)" url="https://www.instagram.com/p/B68pN_Ph9IZ" target="_blank")
     SlideFooter
 </template>
 
