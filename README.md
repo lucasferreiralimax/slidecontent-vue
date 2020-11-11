@@ -1,5 +1,5 @@
 # Slidecontent-vue
-[Live preview Project Online slidecontent-vue.web.app](https://slidecontent-vue.web.app).
+[Live preview Project Online slidecontent-vuejs.web.app](https://slidecontent-vuejs.web.app).
 
 ## Project setup
 ```
