@@ -17,12 +17,12 @@ export default {
 .footer
   padding 3em 0
   a
-    display flex
     align-items center
-    justify-content center
-    font-size 1.5em
-    text-decoration none
     color #000
+    display flex
+    font-size 1.5em
+    justify-content center
+    text-decoration none
     +mobile()
       font-size 1em
   svg

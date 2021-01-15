@@ -19,37 +19,37 @@ export default {
 
 <style scoped lang="stylus">
 .slide-item
-  opacity 0
-  transition .3s
-  height 100%
-  position absolute
-  top 0
-  bottom 0
-  left 0
-  right 0
-  display flex
   align-items center
+  bottom 0
+  display flex
+  height 100%
   justify-content center
+  left 0
+  opacity 0
+  position absolute
+  right 0
+  top 0
+  transition .3s
   &.actived
      opacity 1
      z-index 1
      h1
        animation 3s opacityDelay
   a
-    text-decoration none
     color #000
+    text-decoration none
   img, a
     min-width 100%
   h1
-    position absolute
+    background rgba(#fff, .7)
+    font-size 2em
     left 50%
+    padding .5em
+    position absolute
+    text-align center
     top 1em
     transform translateX(-50%)
-    background rgba(#fff, .7)
-    padding .5em
-    font-size 2em
     width 100%
-    text-align center
     z-index 1
 @keyframes opacityDelay
   0%

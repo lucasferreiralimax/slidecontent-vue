@@ -21,12 +21,12 @@ export default {
     user-select none
   pre
     background #000
-    color green
-    text-align left
-    padding 2em
-    font-size 1.2em
-    overflow-x auto
-    max-width 1000px
-    margin 0 auto
     box-sizing border-box
+    color green
+    font-size 1.2em
+    margin 0 auto
+    max-width 1000px
+    overflow-x auto
+    padding 2em
+    text-align left
 </style>

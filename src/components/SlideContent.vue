@@ -82,34 +82,34 @@ export default {
 
 <style scoped lang="stylus">
 .slide-content
-  color #000
-  width calc(100% - 20px)
-  max-height 100vh
-  min-height 300px
-  max-width 1000px
   border-radius 15px
+  box-sizing border-box
+  color #000
   margin 0 auto
+  max-height 100vh
+  max-width 1000px
+  min-height 300px
   overflow hidden
   position relative
-  box-sizing border-box
+  width calc(100% - 20px)
 
 .slide-navigation
   .btn
     background #fff
+    border 2px solid #000
     border-radius 100%
+    box-shadow 0 0 0 2px rgba(#fff, .5), 0 0 10px 10px rgba(#000, .5)
+    cursor pointer
     font-size 0
     font-weight bold
     height 60px
-    width 60px
-    border 2px solid #000
+    outline none
     position absolute
     top 50%
     transform translateY(-50%)
     transition .3s all
-    cursor pointer
-    box-shadow 0 0 0 2px rgba(#fff, .5), 0 0 10px 10px rgba(#000, .5)
-    outline none
     user-select none
+    width 60px
     z-index 1
     &:hover
       background #000
@@ -120,12 +120,12 @@ export default {
         background #fff
     &:before,
     &:after
-      content ""
-      display flex
-      width 5px
-      height 50%
       background #000
       border-radius 10px
+      content ""
+      display flex
+      height 50%
+      width 5px
   .prev
     left 10px
     &:active

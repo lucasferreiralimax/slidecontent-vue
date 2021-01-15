@@ -72,30 +72,30 @@ body
   padding 0
 
 #app
-  font-family 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
-  text-align center
+  -webkit-font-smoothing antialiased
   color #2c3e50
+  font-family 'Avenir', Helvetica, Arial, sans-serif
   margin-top 60px
+  text-align center
   h1
     font-size 3em
     +mobile()
       font-size 2em
 
 .slide-title, h3
-  display flex
   align-items center
+  display flex
   justify-content center
   svg
     margin-right .5em
 
 .slide-title
+  border-top 3px dashed #ccc
+  color #53b983
   font-size 2em
   margin 2em 0
-  border-top 3px dashed #ccc
   padding-top 2em
-  color #53b983
   +mobile()
     font-size 1em
   svg
