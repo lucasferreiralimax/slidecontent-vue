@@ -83,11 +83,16 @@ export default {
 <style scoped lang="stylus">
 .slide-content
   color #000
-  width 100%
+  width calc(100% - 20px)
   max-height 100vh
-  min-height 100vh
+  min-height 300px
+  max-width 1000px
+  border-radius 15px
+  margin 0 auto
   overflow hidden
   position relative
+  box-sizing border-box
+
 .slide-navigation
   .btn
     background #fff

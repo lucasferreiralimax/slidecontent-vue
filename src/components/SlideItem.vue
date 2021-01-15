@@ -21,7 +21,7 @@ export default {
 .slide-item
   opacity 0
   transition .3s
-  height 100vh
+  height 100%
   position absolute
   top 0
   bottom 0
