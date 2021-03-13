@@ -44,15 +44,15 @@ import SlideItem from './components/SlideItem.vue'
 import SlideSource from './components/SlideSource.vue'
 import SlideFooter from './components/SlideFooter.vue'
 
-const example1 = `SlideContent(name="Exemplo 1" type="infinite" :nav="true" :animation="{ 'disabled': true }")
+const example_1 = `SlideContent(name="Exemplo 1" type="infinite" :nav="true" :animation="{ 'disabled': true }")
   SlideItem(title="Ermelino Matarazzo" :img="require(\`@/assets/ermelino.jpg\`)" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")
   SlideItem.favela.actived(title="Fé em Deus" :img="require(\`@/assets/faveladascriancas.jpg\`)" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")`;
 
-const example2 = `SlideContent(name="Exemplo 2" type="simple" :nav="false")
+const example_2 = `SlideContent(name="Exemplo 2" type="simple" :nav="false")
   SlideItem.actived(title="Ermelino Matarazzo" :img="require(\`@/assets/ermelino.jpg\`)" url="https://github.com/lucasferreiralimax/slidecontent-vue")
   SlideItem.favela(title="Fé em Deus" :img="require(\`@/assets/faveladascriancas.jpg\`)" url="https://github.com/lucasferreiralimax/slidecontent-vue")`;
 
-const example3 = `SlideContent(name="Exemplo 3" type="simple" :nav="true" :animation="{ direction: 'prev', time: 10000 }")
+const example_3 = `SlideContent(name="Exemplo 3" type="simple" :nav="true" :animation="{ direction: 'prev', time: 10000 }")
   SlideItem.actived(title="Ermelino Matarazzo" :img="require(\`@/assets/ermelino.jpg\`)" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")
   SlideItem.favela(title="Fé em Deus" :img="require(\`@/assets/faveladascriancas.jpg\`)" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")`;
 
@@ -60,9 +60,9 @@ export default {
   name: 'app',
   data() {
     return {
-      example_1: example1,
-      example_2: example2,
-      example_3: example3,
+      example_1,
+      example_2,
+      example_3,
     }
   },
   components: {
