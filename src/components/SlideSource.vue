@@ -29,4 +29,7 @@ export default {
     overflow-x auto
     padding 2em
     text-align left
+    &::selection
+      color #fff
+      background green
 </style>
