@@ -4,9 +4,9 @@
       slot
     .slide-navigation(v-if="nav")
       button.btn.prev(type="button" name="button" @click="prevHandler")
-        | Ir para a esquerda
+        | {{ $t("to_left") }}
       button.btn.next(type="button" name="button" @click="nextHandler")
-        | Ir para a direita
+        | {{ $t("to_right") }}
 </template>
 
 <script>
