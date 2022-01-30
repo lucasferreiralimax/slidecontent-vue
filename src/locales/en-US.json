@@ -7,5 +7,6 @@
   "slide_fix_time": "Slide time duration of 10 seconds",
   "to_left": "Go to left",
   "to_right": "Go to right",
-  "source": "Source code"
+  "source": "Source code",
+  "not_found": "404 Not Found"
 }

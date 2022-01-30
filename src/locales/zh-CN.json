@@ -7,5 +7,6 @@
   "slide_fix_time": "幻灯片持续 10 秒",
   "to_left": "往左走",
   "to_right": "向右走",
-  "source": "源代码"
+  "source": "源代码",
+  "not_found": "404 未找到"
 }
