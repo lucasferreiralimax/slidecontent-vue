@@ -1,6 +1,6 @@
 {
   "god_faith": "Fe en Dios",
-  "title": "SlideContentReact",
+  "title": "SlideContentVue",
   "city": "Ermelino Matarazzo",
   "slide_infinity": "Deslizar infinita",
   "slide_no_navigation": "Deslizar sin navegación",
@@ -8,5 +8,10 @@
   "to_left": "ve a la izquierda",
   "to_right": "ve a la derecha",
   "source": "Codigo fuente",
-  "not_found": "404 no encontrado"
+  "not_found": "404 no encontrado",
+  "about": "Una diapositiva de contenido simple desarrollada en Vue con botones de navegación y un temporizador en la animación de transición",
+  "nav": {
+    "home": "Comienzo",
+    "about": "Información"
+  }
 }

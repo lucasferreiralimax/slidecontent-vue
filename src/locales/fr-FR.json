@@ -1,6 +1,6 @@
 {
   "god_faith": "Foi en Dieu",
-  "title": "SlideContentReact",
+  "title": "SlideContentVue",
   "city": "Ermelino Matarazzo",
   "slide_infinity": "Glisser infini",
   "slide_no_navigation": "Glisser pas de navigation",
@@ -8,5 +8,10 @@
   "to_left": "va à gauche",
   "to_right": "aller à droite",
   "source": "Code source",
-  "not_found": "404 Non trouvé"
+  "not_found": "404 Non trouvé",
+  "about": "Une diapositive de contenu simple développée dans Vue avec des boutons de navigation et une minuterie dans l'animation de transition",
+  "nav": {
+    "home": "Démarrer",
+    "about": "Information"
+  }
 }

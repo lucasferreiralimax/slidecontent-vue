@@ -1,6 +1,6 @@
 {
   "god_faith": "Вера в Бога",
-  "title": "SlideContentReact",
+  "title": "SlideContentVue",
   "city": "Ermelino Matarazzo",
   "slide_infinity": "бесконечный слайд",
   "slide_no_navigation": "Слайд без навигации",
@@ -8,5 +8,10 @@
   "to_left": "идите налево",
   "to_right": "Иди направо",
   "source": "Исходный код",
-  "not_found": "404 Не Найдено"
+  "not_found": "404 Не Найдено",
+  "about": "Простой слайд с контентом, разработанный в Vue, с кнопками навигации и таймером в анимации перехода.",
+  "nav": {
+    "home": "Начинать",
+    "about": "Информация"
+  }
 }

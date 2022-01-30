@@ -4,6 +4,9 @@
     router-link(to="/").logo
       h1 {{ $t("title") }}
       img(alt="Vue logo" src="./assets/logo.png")
+    #nav
+      router-link(to="/") {{ $t("nav.home") }}
+      router-link(to="/about") {{ $t("nav.about") }}
     router-view
     SlideFooter
 </template>
@@ -42,4 +45,22 @@ body
     font-size 3em
     +mobile()
       font-size 2em
+#nav
+  display flex
+  width 100%
+  max-width 300px
+  margin 0 auto
+  justify-content center
+  align-items center
+  a
+    padding 1rem
+    margin 1rem
+    background #eee
+    color #2c3e50
+    border-radius 10px
+    text-decoration none
+    width 100%
+    &.router-link-exact-active
+      background #53b983
+      color #fff
 </style>

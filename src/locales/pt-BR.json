@@ -1,6 +1,6 @@
 {
   "god_faith": "Fé em Deus",
-  "title": "SlideContentReact",
+  "title": "SlideContentVue",
   "city": "Ermelino Matarazzo",
   "slide_infinity": "Slide infinito",
   "slide_no_navigation": "Slide sem navegação",
@@ -8,5 +8,10 @@
   "to_left": "Ir para a esquerda",
   "to_right": "Ir para a direita",
   "source": "Código Fonte",
-  "not_found": "404 Nada encontrado"
+  "not_found": "404 Nada encontrado",
+  "about": "Um slide de conteúdo simples desenvolvido em Vue com botões de navegação e um timer na animação de transição",
+  "nav": {
+    "home": "Inicio",
+    "about": "Informações"
+  }
 }

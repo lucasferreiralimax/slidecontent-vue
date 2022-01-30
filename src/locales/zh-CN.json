@@ -1,6 +1,6 @@
 {
   "god_faith": "信仰上帝",
-  "title": "幻灯片内容反应",
+  "title": "幻灯片内容视图",
   "city": "埃尔梅利诺·马塔拉佐",
   "slide_infinity": "无限滑动",
   "slide_no_navigation": "没有导航的幻灯片",
@@ -8,5 +8,10 @@
   "to_left": "往左走",
   "to_right": "向右走",
   "source": "源代码",
-  "not_found": "404 未找到"
+  "not_found": "404 未找到",
+  "about": "用 Vue 开发的简单内容幻灯片，带有导航按钮和过渡动画中的计时器",
+  "nav": {
+    "home": "开始",
+    "about": "信息"
+  }
 }

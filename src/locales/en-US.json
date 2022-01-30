@@ -1,6 +1,6 @@
 {
   "god_faith": "Faith in God",
-  "title": "SlideContentReact",
+  "title": "SlideContentVue",
   "city": "Ermelino Matarazzo",
   "slide_infinity": "Slide infinity",
   "slide_no_navigation": "Slide don't have navigation",
@@ -8,5 +8,10 @@
   "to_left": "Go to left",
   "to_right": "Go to right",
   "source": "Source code",
-  "not_found": "404 Not Found"
+  "not_found": "404 Not Found",
+  "about": "A simple content slide developed in Vue with navigation buttons and a timer in the transition animation",
+  "nav": {
+    "home": "Home",
+    "about": "Information"
+  }
 }
