@@ -11,7 +11,7 @@
   "not_found": "404 Nada encontrado",
   "about": "Um slide de conteúdo simples desenvolvido em Vue com botões de navegação e um timer na animação de transição",
   "nav": {
-    "home": "Inicio",
+    "home": "Início",
     "about": "Informações"
   }
 }
