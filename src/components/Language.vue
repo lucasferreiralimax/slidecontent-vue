@@ -22,13 +22,22 @@ export default {
 </script>
 
 <style lang="stylus">
-  .language button
-    margin 0.5rem
-    cursor pointer
-    &.active
-      color #fff
-      background #53b983
+  .language
+    display flex
+    align-items center
+    justify-content center
+    max-width 500px
+    margin 0 auto
+    button
+      flex 1
+      margin 0.5rem
+      cursor pointer
       border 0
+      background #eee
       padding 0.5rem
       border-radius 5px
+      box-shadow 0 1px 0 rgba(255, 255, 255, 1), 0 2px 5px rgba(0, 0, 0, 0.2)
+      &.active
+        color #fff
+        background #53b983
 </style>
