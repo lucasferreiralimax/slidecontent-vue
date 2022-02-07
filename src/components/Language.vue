@@ -1,6 +1,7 @@
 <template lang="pug">
   section.language
       button(v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang" @click="changeLanguage(lang)" :class="{'active': $i18n.locale == lang}")
+        img(:src="require(`@/assets/flags/${lang}.svg`)")
         | {{ lang }}
 </template>
 
@@ -23,13 +24,10 @@ export default {
 
 <style lang="stylus">
   .language
-    display flex
-    align-items center
-    justify-content center
-    max-width 500px
-    margin 0 auto
+    img
+      width 20px
+      pointer-events none
     button
-      flex 1
       margin 0.5rem
       cursor pointer
       border 0
@@ -37,7 +35,8 @@ export default {
       padding 0.5rem
       border-radius 5px
       box-shadow 0 1px 0 rgba(255, 255, 255, 1), 0 2px 5px rgba(0, 0, 0, 0.2)
+      font-size 0
       &.active
         color #fff
-        background #53b983
+        background #2c3e50
 </style>
