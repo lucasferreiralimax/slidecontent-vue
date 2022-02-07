@@ -54,7 +54,7 @@ body
 #nav
   display flex
   width 100%
-  max-width 300px
+  max-width 400px
   margin 0 auto
   justify-content center
   align-items center
