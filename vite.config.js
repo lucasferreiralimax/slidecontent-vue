@@ -22,4 +22,17 @@ export default defineConfig({
       }
     }
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'pages': [
+            './src/views/Home.vue',
+            './src/views/About.vue',
+            './src/views/Notfound.vue',
+          ],
+        },
+      },
+    },
+  },
 })
