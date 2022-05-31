@@ -6,17 +6,17 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue')
+      component: () => import(`../views/Home.vue`)
     },
     {
       path: '/about',
       name: 'about',
-      component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+      component: () => import(`../views/About.vue`)
     },
     {
       path: '/:catchAll(.*)',
       name: 'Notfound',
-      component: () => import(/* webpackChunkName: "notfound" */ '../views/Notfound.vue')
+      component: () => import(`../views/Notfound.vue`)
     }
   ]
 })
