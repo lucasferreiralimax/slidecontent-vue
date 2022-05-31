@@ -27,7 +27,7 @@ export default defineComponent({
 <template lang="pug">
 section.language
   button(v-for="(lang, i) in supportLocales" :key="`Lang${i}`" :value="lang" @click="changeLanguage(lang)" :class="{'active': locale == lang}")
-    img(:src="`/src/assets/flags/${lang}.svg`" :title="lang")
+    img(:src="`./img/flags/${lang}.svg`" :title="lang")
     | {{ lang }}
 </template>
 
