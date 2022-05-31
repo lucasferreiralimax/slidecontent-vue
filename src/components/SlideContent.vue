@@ -1,84 +1,100 @@
-<template lang="pug">
-  section.slide-content(:class="type")
-    div.slide-slots
-      slot
-    .slide-navigation(v-if="nav")
-      button.btn.prev(type="button" name="button" @click="prevHandler")
-        | {{ $t("to_left") }}
-      button.btn.next(type="button" name="button" @click="nextHandler")
-        | {{ $t("to_right") }}
-</template>
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
 
-<script>
-export default {
-  name: 'SlideContent',
-  props: {
-    name: String,
-    type: String,
-    nav: Boolean,
-    animation: Object
-  },
-  created() { this.slideAnimation() },
-  methods: {
-    slideAnimation() {
-      let slideAnimationInitial = setInterval(() => {
-        this.nextHandler()
-      }, 6000);
+const slideContainer = ref()
+const props = defineProps({
+  name: String,
+  type: String,
+  nav: Boolean,
+  animation: Object
+});
 
-      slideAnimationInitial
+let slideAnimationInitial = null;
+let slideAnimationOptions = null;
 
-      if(this.animation) {
-        clearInterval(slideAnimationInitial)
-        let slideAnimationOptions = setInterval(() => {
-          if(this.animation.direction == "prev") {
-            this.prevHandler()
-          } else {
-            this.nextHandler()
-          }
-        }, this.animation.time);
+onMounted(() => {
+  if(slideContainer.value.querySelectorAll('.slide-item')) {
+    slideAnimation();
+  }
+});
 
-        if(this.animation.disabled) {
-          clearInterval(slideAnimationOptions)
-        } else {
-          slideAnimationOptions
-        }
+onUnmounted(() => {
+  clearInterval(slideAnimationInitial)
+  clearInterval(slideAnimationOptions)
+})
+
+const slideAnimation = () => {
+  slideAnimationInitial = setInterval(() => {
+    nextHandler()
+  }, 6000);
+
+  slideAnimationInitial
+
+  if(props.animation) {
+    clearInterval(slideAnimationInitial)
+    slideAnimationOptions = setInterval(() => {
+      if(props.animation.direction == "prev") {
+        prevHandler()
+      } else {
+        nextHandler()
       }
-    },
-    prevHandler() {
-      let slides = this.$slots.default
+    }, props.animation.time);
 
-      for(let item of slides) {
-        if(item.elm.classList.contains("actived")) {
-          if(item.elm.previousElementSibling) {
-            item.elm.classList.remove("actived")
-            item.elm.previousElementSibling.classList.add("actived")
-          } else {
-            item.elm.classList.remove("actived")
-            slides[slides.length - 1].elm.classList.add("actived")
-          }
-          break;
-        }
+    if(props.animation.disabled) {
+      clearInterval(slideAnimationOptions)
+    } else {
+      slideAnimationOptions
+    }
+  }
+};
+
+function prevHandler () {
+  let slides = slideContainer.value.querySelectorAll('.slide-item')
+
+  for(let item of slides) {
+    if(item.classList.contains("actived")) {
+      if(item.previousElementSibling) {
+        item.classList.remove("actived")
+        item.previousElementSibling.classList.add("actived")
+      } else {
+        item.classList.remove("actived")
+        slides[slides.length - 1].classList.add("actived")
       }
-    },
-    nextHandler() {
-      let slides = this.$slots.default
+      break;
+    }
+  }
+};
 
-      for(let item of slides) {
-        if(item.elm.classList.contains("actived")) {
-          if(item.elm.nextElementSibling) {
-            item.elm.classList.remove("actived")
-            item.elm.nextElementSibling.classList.add("actived")
-            break;
-          } else {
-            item.elm.classList.remove("actived")
-            slides[0].elm.classList.add("actived")
-          }
-        }
+function nextHandler () {
+  let slides = slideContainer.value.querySelectorAll('.slide-item')
+
+  for(let item of slides) {
+    if(item.classList.contains("actived")) {
+      if(item.nextElementSibling) {
+        item.classList.remove("actived")
+        item.nextElementSibling.classList.add("actived")
+        break;
+      } else {
+        item.classList.remove("actived")
+        slides[0].classList.add("actived")
       }
     }
   }
-}
+};
 </script>
+
+<template lang="pug">
+section.slide-content(ref="slideContainer" :class="type")
+  div.slide-slots
+    slot
+  .slide-navigation(v-if="nav")
+    button.btn.prev(type="button" name="button" @click="prevHandler")
+      | {{ t("to_left") }}
+    button.btn.next(type="button" name="button" @click="nextHandler")
+      | {{ t("to_right") }}
+</template>
 
 <style scoped lang="stylus">
 .slide-content

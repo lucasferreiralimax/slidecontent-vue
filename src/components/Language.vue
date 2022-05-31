@@ -1,26 +1,35 @@
-<template lang="pug">
-  section.language
-      button(v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang" @click="changeLanguage(lang)" :class="{'active': $i18n.locale == lang}")
-        img(:src="require(`@/assets/flags/${lang}.svg`)")
-        | {{ lang }}
-</template>
-
 <script>
-export default {
-  name: 'Language',
-  data() {
-    return {
-      langs: ['pt-BR', 'en-US', 'es-ES', 'fr-FR', 'ru-RU', 'zh-CN'],
-    }
-  },
-  methods: {
-    changeLanguage (lang) {
-      this.$i18n.locale = lang;
+import { defineComponent, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { SUPPORT_LOCALES, setI18nLanguage } from '../i18n';
+
+export default defineComponent({
+  name: 'TranslateSelect',
+  setup() {
+    const { t, locale } = useI18n({ useScope: 'global' });
+    watch(locale, (val) => {
+      setI18nLanguage(val);
+    });
+    function changeLanguage (lang) {
+      setI18nLanguage(lang);
       localStorage.setItem('language', lang);
-    }
-  }
-}
+    };
+    return {
+      t,
+      locale,
+      supportLocales: SUPPORT_LOCALES,
+      changeLanguage,
+    };
+  },
+});
 </script>
+
+<template lang="pug">
+section.language
+  button(v-for="(lang, i) in supportLocales" :key="`Lang${i}`" :value="lang" @click="changeLanguage(lang)" :class="{'active': locale == lang}")
+    img(:src="`/src/assets/flags/${lang}.svg`" :title="lang")
+    | {{ lang }}
+</template>
 
 <style lang="stylus">
   .language

@@ -1,9 +1,10 @@
-import { shallowMount } from '@vue/test-utils'
-import i18n from '@/i18n'
+import { describe, it, expect } from 'vitest'
 
-import Language from './Language.vue'
+import { mount } from '@vue/test-utils'
+import i18n from '../i18n'
+import Language from '../components/Language.vue'
 
-const wrapper = shallowMount(Language, {
+const wrapper = mount(Language, {
   i18n
 })
 
@@ -12,3 +13,4 @@ describe('Language', () => {
     expect(wrapper.exists()).toBeTruthy()
   })
 })
+

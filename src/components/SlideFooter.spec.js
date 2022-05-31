@@ -1,14 +1,14 @@
-import { shallowMount } from '@vue/test-utils'
+import { describe, it, expect } from 'vitest'
 
-import SlideFooter from './SlideFooter.vue'
+import { mount } from '@vue/test-utils'
+import SlideFooter from '../components/SlideFooter.vue'
 
-const wrapper = shallowMount(SlideFooter)
+const wrapper = mount(SlideFooter)
 
 describe('SlideFooter', () => {
   it('is SlideFooter a vue instance', () => {
     expect(wrapper.exists()).toBeTruthy()
   })
-
   it('is SlideFooter contains div footer', () => {
     expect(wrapper.find('.footer').exists()).toBeTruthy()
   })

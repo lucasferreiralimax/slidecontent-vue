@@ -1,8 +1,9 @@
-import { shallowMount } from '@vue/test-utils'
+import { describe, it, expect } from 'vitest'
 
-import SlideItem from './SlideItem.vue'
+import { mount } from '@vue/test-utils'
+import SlideItem from '../components/SlideItem.vue'
 
-const wrapper = shallowMount(SlideItem)
+const wrapper = mount(SlideItem)
 
 describe('SlideItem', () => {
   it('is SlideItem a vue instance', () => {
