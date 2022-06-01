@@ -13,6 +13,11 @@ export default defineConfig({
       include: path.resolve(__dirname, 'src/locales/**')
     })
   ],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
+  },
   css: {
     preprocessorOptions: {
       stylus: {
