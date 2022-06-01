@@ -21,7 +21,7 @@ section.source
   pre
     background #000
     box-sizing border-box
-    color green
+    color #53b983
     font-size 1.2em
     margin 0 auto
     max-width 1000px
@@ -30,5 +30,5 @@ section.source
     text-align left
     &::selection
       color #fff
-      background green
+      background #53b983
 </style>

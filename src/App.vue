@@ -70,7 +70,7 @@ body
       outline none
       fill #2c3e50
     &.RouterLink-exact-active
-      background #53b983
+      background #008000
       color #fff
       svg
         fill #fff
