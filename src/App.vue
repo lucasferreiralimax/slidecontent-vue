@@ -44,8 +44,8 @@ body
     color #2c3e50
   h1
     font-size 3em
-    //+mobile()
-    //  font-size 2em
+    +mobile()
+     font-size 1.2em
 #nav
   display flex
   width 100%

@@ -5,6 +5,8 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueI18n from '@intlify/vite-plugin-vue-i18n'
 
+const pathSrc = path.resolve(__dirname, "./src");
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -15,15 +17,13 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': require('path').resolve(__dirname, 'src')
     }
   },
   css: {
     preprocessorOptions: {
       stylus: {
-        import: [
-          path.resolve(__dirname, "src/mixins/_responsive")
-        ]
+        additionalData: `@import "${pathSrc}/mixins/_responsive";`,
       }
     }
   },

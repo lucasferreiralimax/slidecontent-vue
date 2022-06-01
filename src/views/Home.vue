@@ -13,13 +13,13 @@ let example_1 = (faith, city) => `SlideContent(
 )
   SlideItem(
     title="${city}"
-    // :img="require(\`./assets/ermelino.jpg\"
+    :img="require(\`./assets/ermelino.jpg\"
     url="https://github.com/lucasferreiralimax/slidecontent-vue"
     target="_blank"
   )
   SlideItem.favela.actived(
     title="${faith}"
-    // :img="require(\`./assets/faveladascriancas.jpg\"
+    :img="require(\`./assets/faveladascriancas.jpg\"
     url="https://github.com/lucasferreiralimax/slidecontent-vue"
     target="_blank"
   )`;
@@ -31,12 +31,12 @@ let example_2 = (faith, city) => `SlideContent(
 )
   SlideItem.actived(
     title="${city}"
-    // :img="require(\`./assets/ermelino.jpg\"
+    :img="require(\`./assets/ermelino.jpg\"
     url="https://github.com/lucasferreiralimax/slidecontent-vue"
   )
   SlideItem.favela(
     title="${faith}"
-    // :img="require(\`./assets/faveladascriancas.jpg\"
+    :img="require(\`./assets/faveladascriancas.jpg\"
     url="https://github.com/lucasferreiralimax/slidecontent-vue"
   )`;
 
@@ -48,13 +48,13 @@ let example_3 = (faith, city) => `SlideContent(
 )
   SlideItem.actived(
     title="${city}"
-    // :img="require(\`./assets/ermelino.jpg\"
+    :img="require(\`./assets/ermelino.jpg\"
     url="https://github.com/lucasferreiralimax/slidecontent-vue"
     target="_blank"
   )
   SlideItem.favela(
     title="${faith}"
-    // :img="require(\`./assets/faveladascriancas.jpg\"
+    :img="require(\`./assets/faveladascriancas.jpg\"
     url="https://github.com/lucasferreiralimax/slidecontent-vue"
     target="_blank"
   )`;
@@ -115,8 +115,8 @@ section.page
   font-size 2em
   margin 2em 0
   padding-top 2em
-  //+mobile()
-  //  font-size 1em
+  +mobile()
+   font-size 1em
   svg
     fill #008000
 .favela
