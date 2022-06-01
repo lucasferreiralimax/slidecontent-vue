@@ -28,6 +28,8 @@ section.source
     overflow-x auto
     padding 2em
     text-align left
+    +mobile()
+      font-size 0.6rem
     &::selection
       color #fff
       background #53b983

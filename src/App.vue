@@ -53,6 +53,8 @@ body
   margin 0 auto
   justify-content center
   align-items center
+  +mobile()
+    flex-direction column
   a
     padding 1rem 1.5rem 1rem 1rem
     margin 0.5rem
@@ -64,6 +66,8 @@ body
     justify-content center
     align-items center
     display flex
+    +mobile()
+      width calc(100% - 60px)
     svg
       width 25px
       margin-right 0.5rem
