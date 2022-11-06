@@ -1,6 +1,10 @@
 <template lang="pug">
 article.slide-item
-  a(:href="url" :target="target")
+  template(v-if="url")
+    a(:href="url" :target="target")
+      h1(v-if="title") {{ title }}
+      img(:src="img" :alt="title")
+  template(v-else)
     h1(v-if="title") {{ title }}
     img(:src="img" :alt="title")
 </template>
@@ -54,6 +58,7 @@ export default {
     top 50%
     transform translateX(-50%) translateY(-50%)
     width 100%
+    user-select none
     z-index 1
 
 @keyframes opacityDelay
