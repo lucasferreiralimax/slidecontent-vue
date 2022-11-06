@@ -1,14 +1,14 @@
 import { describe, it, expect } from 'vitest'
 
 import { mount } from '@vue/test-utils'
-import Language from './index.vue'
+import AppLanguage from './index.vue'
 
 import { SUPPORT_LOCALES as supportLocales } from '@/i18n';
 
-const wrapper = mount(Language)
+const wrapper = mount(AppLanguage)
 
-describe('Language', () => {
-  it('is Language a vue instance', () => {
+describe('AppLanguage', () => {
+  it('is AppLanguage a vue instance', () => {
     expect(wrapper.exists()).toBeTruthy()
   })
   for(let item of supportLocales) {

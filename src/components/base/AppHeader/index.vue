@@ -1,0 +1,14 @@
+<script setup>
+import AppLogo from '@/components/base/AppLogo/index.vue';
+import AppVersion from '@/components/base/AppVersion/index.vue';
+import AppNavigation from '@/components/base/AppNavigation/index.vue';
+import AppLanguage from '@/components/base/AppLanguage/index.vue';
+</script>
+
+<template lang="pug">
+header
+  AppLanguage
+  AppLogo
+  AppVersion
+  AppNavigation
+</template>
