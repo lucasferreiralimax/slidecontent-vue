@@ -1,17 +1,13 @@
 <script setup>
-import { text_1, text_2, text_3, text_4 } from './textsExample.js';
+import textExample from './textsExample';
 import { useI18n } from 'vue-i18n';
 import SlideContent from '@/components/SlideContent/index.vue';
 import SlideItem from '@/components/SlideItem/index.vue';
 import SlideSource from '@/components/SlideSource/index.vue';
 
 const { t } = useI18n();
+const text = textExample(t("god_faith"), t("city"));
 
-const example_1 = text_1(t("god_faith"), t("city"));
-const example_2 = text_2(t("god_faith"), t("city"));
-const example_3 = text_3(t("god_faith"), t("city"));
-const example_4 = text_4(t("god_faith"), t("city"));
-const example_5 = text_4(t("god_faith"), t("city"));
 </script>
 
 <template lang="pug">
@@ -27,7 +23,7 @@ section.page
       SlideItem(:title="t('city')" img="./assets/ermelino.jpg" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")
       SlideItem.favela.actived(:title="t('god_faith')" img="./assets/faveladascriancas.jpg" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")
     SlideSource
-      pre {{ example_1 }}
+      pre {{ text.one }}
   .example
     h2.slide-title
       svg(viewBox="0 -21 511.987 511" width="50px" xmlns="http://www.w3.org/2000/svg")
@@ -38,7 +34,7 @@ section.page
       SlideItem.actived(:title="t('city')" img="./assets/ermelino.jpg" url="https://github.com/lucasferreiralimax/slidecontent-vue")
       SlideItem.favela(:title="t('god_faith')" img="./assets/faveladascriancas.jpg" url="https://github.com/lucasferreiralimax/slidecontent-vue")
     SlideSource
-      pre {{ example_2 }}
+      pre {{ text.two }}
   .example
     h2.slide-title
       svg(xmlns="http://www.w3.org/2000/svg" width="60px" viewBox="0 0 94.294 94.294")
@@ -48,7 +44,7 @@ section.page
       SlideItem.actived(:title="t('city')" img="./assets/ermelino.jpg" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")
       SlideItem.favela(:title="t('god_faith')" img="./assets/faveladascriancas.jpg" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")
     SlideSource
-      pre {{ example_3 }}
+      pre {{ text.three }}
   .example
     h2.slide-title
       svg(xmlns="http://www.w3.org/2000/svg" width="60px" height="60px" viewBox="0 0 24 24")
@@ -58,7 +54,7 @@ section.page
       SlideItem(:title="t('city')" img="./assets/ermelino.jpg" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")
       SlideItem.favela.actived(:title="t('god_faith')" img="./assets/faveladascriancas.jpg" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")
     SlideSource
-      pre {{ example_4 }}.
+      pre {{ text.four }}.
   .example
     h2.slide-title
       svg(xmlns="http://www.w3.org/2000/svg" width="60px" height="60px" viewBox="0 0 1024 1024")
@@ -68,7 +64,7 @@ section.page
       SlideItem(:title="t('city')" img="./assets/ermelino.jpg" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")
       SlideItem.favela.actived(:title="t('god_faith')" img="./assets/faveladascriancas.jpg" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")
     SlideSource
-      pre {{ example_5 }}
+      pre {{ text.five }}
 </template>
 
 <style lang="stylus">
