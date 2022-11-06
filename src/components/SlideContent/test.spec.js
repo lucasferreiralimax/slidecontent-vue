@@ -27,4 +27,10 @@ describe('SlideContent', () => {
   it('is SlideContent contains div slots', () => {
     expect(wrapper.find('.slide-slots').exists()).toBeTruthy()
   })
+
+  it('is SlideContent contains border', async () => {
+    await wrapper.setProps({ border: true })
+    expect(wrapper.vm.border).toBeTruthy()
+    expect(wrapper.classes()).toContain('border')
+  })
 })
