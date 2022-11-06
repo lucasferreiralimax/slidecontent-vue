@@ -77,14 +77,14 @@ section.page
 
 .slide-title
   border-top 3px dashed #ccc
-  color #008000
+  color #289f6a
   font-size 2em
   margin 2em 0
   padding-top 2em
   +mobile()
    font-size 1em
   svg
-    fill #008000
+    fill #289f6a
 .favela
   h1
     font-family 'Great Vibes', cursive

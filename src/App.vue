@@ -76,8 +76,8 @@ body
       margin-right 0.5rem
       outline none
       fill #2c3e50
-    &.RouterLink-exact-active
-      background #008000
+    &.router-link-exact-active
+      background #289f6a
       color #fff
       svg
         fill #fff
