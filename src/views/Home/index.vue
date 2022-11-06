@@ -11,6 +11,7 @@ const example_1 = text_1(t("god_faith"), t("city"));
 const example_2 = text_2(t("god_faith"), t("city"));
 const example_3 = text_3(t("god_faith"), t("city"));
 const example_4 = text_4(t("god_faith"), t("city"));
+const example_5 = text_4(t("god_faith"), t("city"));
 </script>
 
 <template lang="pug">
@@ -50,14 +51,24 @@ section.page
       pre {{ example_3 }}
   .example
     h2.slide-title
-      svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24")
+      svg(xmlns="http://www.w3.org/2000/svg" width="60px" height="60px" viewBox="0 0 24 24")
         path(d="M11.5 18.5a1 1 0 1 0 1 1 1 1 0 0 0-1-1Zm9-15a1 1 0 0 0-1-1h-16a1 1 0 0 0-1 1v16a1 1 0 0 0 2 0v-15h15a1 1 0 0 0 1-1Zm-5 15a1 1 0 1 0 1 1 1 1 0 0 0-1-1Zm-8 0a1 1 0 1 0 1 1 1 1 0 0 0-1-1Zm12-12a1 1 0 1 0 1 1 1 1 0 0 0-1-1Zm0 4a1 1 0 1 0 1 1 1 1 0 0 0-1-1Zm0 4a1 1 0 1 0 1 1 1 1 0 0 0-1-1Zm0 4a1 1 0 1 0 1 1 1 1 0 0 0-1-1Z")
       span {{ t("slide_border") }}
     SlideContent(name="Exemplo 4" type="infinite" :nav="true" border)
       SlideItem(:title="t('city')" img="./assets/ermelino.jpg" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")
       SlideItem.favela.actived(:title="t('god_faith')" img="./assets/faveladascriancas.jpg" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")
     SlideSource
-      pre {{ example_4 }}
+      pre {{ example_4 }}.
+  .example
+    h2.slide-title
+      svg(xmlns="http://www.w3.org/2000/svg" width="60px" height="60px" viewBox="0 0 1024 1024")
+        path(d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z")
+      span {{ t("slide_squared") }}
+    SlideContent(name="Exemplo 5" type="infinite" :nav="true" border squared)
+      SlideItem(:title="t('city')" img="./assets/ermelino.jpg" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")
+      SlideItem.favela.actived(:title="t('god_faith')" img="./assets/faveladascriancas.jpg" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")
+    SlideSource
+      pre {{ example_5 }}
 </template>
 
 <style lang="stylus">

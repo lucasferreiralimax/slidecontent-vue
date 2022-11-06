@@ -10,6 +10,7 @@ const props = defineProps({
   nav: Boolean,
   animation: Object,
   border: Boolean,
+  squared: Boolean,
 });
 
 let slideAnimationInitial = null;
@@ -87,7 +88,7 @@ function nextHandler () {
 </script>
 
 <template lang="pug">
-section.slide-content(ref="slideContainer" :class="[type, border ? 'border' : '']")
+section.slide-content(ref="slideContainer" :class="[type, border ? 'border' : '', squared ? 'squared' : '']")
   div.slide-slots
     slot
   .slide-navigation(v-if="nav")
@@ -111,6 +112,10 @@ section.slide-content(ref="slideContainer" :class="[type, border ? 'border' : ''
   width calc(100% - 20px)
   &.border
     box-shadow 0 0 0 2px #fff, 0 0 0 3px #222, 0 5px 20px rgba(0,0,0,.5)
+  &.squared
+    border-radius 0
+    .slide-navigation .btn
+      border-radius 0
 
 .slide-navigation
   .btn

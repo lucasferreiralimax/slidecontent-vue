@@ -51,3 +51,18 @@ export const text_4 = (faith, city) => `SlideContent(name="Exemplo 4" type="infi
     url="https://github.com/lucasferreiralimax/slidecontent-vue"
     target="_blank"
   )`;
+
+  export const text_5 = (faith, city) => `SlideContent(name="Exemplo 4" type="infinite" :nav="true" border squared)
+  SlideItem(
+    title="${city}"
+    :img="require(\`./assets/ermelino.jpg\"
+    url="https://github.com/lucasferreiralimax/slidecontent-vue"
+    target="_blank"
+  )
+  SlideItem.favela.actived(
+    title="${faith}"
+    :img="require(\`./assets/faveladascriancas.jpg\"
+    url="https://github.com/lucasferreiralimax/slidecontent-vue"
+    target="_blank"
+  )`;
+
