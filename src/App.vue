@@ -1,10 +1,12 @@
 
 <script setup>
+import pkg from '../package.json';
 import { RouterLink, RouterView } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import Language from './components/Language/index.vue';
 import SlideFooter from './components/SlideFooter/index.vue';
 const { t } = useI18n();
+const appVersion = pkg.version;
 </script>
 
 <template lang='pug'>
@@ -12,6 +14,7 @@ Language
 RouterLink.logo(to='/')
   h1 {{ t('title') }}
   img(alt='Vue logo' src='./assets/logo.svg' width='80')
+p.version {{ appVersion }}
 #nav
   RouterLink(to='/')
     svg(aria-hidden='true' viewBox='0 0 24 24' focusable='false' data-testid='HomeIcon' tabindex='-1' title='HomeIcon')

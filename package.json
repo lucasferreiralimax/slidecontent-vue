@@ -1,8 +1,12 @@
 {
   "name": "slidecontent-vue",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": false,
   "author": "lucasferreiralimax",
+  "repository": "https://github.com/lucasferreiralimax/slidecontent-vue",
+  "bugs": {
+    "url": "https://github.com/lucasferreiralimax/slidecontent-vue/issues"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
