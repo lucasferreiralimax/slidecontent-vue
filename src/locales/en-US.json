@@ -10,6 +10,7 @@
   "source": "Source code",
   "not_found": "404 Not Found",
   "about": "A simple content slide developed in Vue with navigation buttons and a timer in the transition animation",
+  "version": "Version",
   "nav": {
     "home": "Home",
     "about": "Information"

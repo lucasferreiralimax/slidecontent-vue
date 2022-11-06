@@ -10,6 +10,7 @@
   "source": "Codigo fuente",
   "not_found": "404 no encontrado",
   "about": "Una diapositiva de contenido simple desarrollada en Vue con botones de navegación y un temporizador en la animación de transición",
+  "version": "Versión",
   "nav": {
     "home": "Comienzo",
     "about": "Información"

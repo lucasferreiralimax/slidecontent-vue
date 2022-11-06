@@ -10,6 +10,7 @@
   "source": "Código Fonte",
   "not_found": "404 Nada encontrado",
   "about": "Um slide de conteúdo simples desenvolvido em Vue com botões de navegação e um timer na animação de transição",
+  "version": "Versão",
   "nav": {
     "home": "Início",
     "about": "Informações"

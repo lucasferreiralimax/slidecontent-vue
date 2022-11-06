@@ -10,6 +10,7 @@
   "source": "Code source",
   "not_found": "404 Non trouvé",
   "about": "Une diapositive de contenu simple développée dans Vue avec des boutons de navigation et une minuterie dans l'animation de transition",
+  "version": "Version",
   "nav": {
     "home": "Démarrer",
     "about": "Information"

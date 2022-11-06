@@ -14,7 +14,7 @@ Language
 RouterLink.logo(to='/')
   h1 {{ t('title') }}
   img(alt='Vue logo' src='./assets/logo.svg' width='80')
-p.version {{ appVersion }}
+p.version {{ t('version') }} {{ appVersion }}
 #nav
   RouterLink(to='/')
     svg(aria-hidden='true' viewBox='0 0 24 24' focusable='false' data-testid='HomeIcon' tabindex='-1' title='HomeIcon')
