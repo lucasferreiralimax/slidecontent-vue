@@ -1,9 +1,9 @@
 <script setup>
-import { defineComponent, watch } from 'vue';
+import { watch } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { SUPPORT_LOCALES as supportLocales, setI18nLanguage } from '../i18n';
+import { SUPPORT_LOCALES as supportLocales, setI18nLanguage } from '@/i18n';
 
-const { t, locale } = useI18n({ useScope: 'global' });
+const { locale } = useI18n({ useScope: 'global' });
 
 watch(locale, (val) => {
   setI18nLanguage(val);
@@ -17,7 +17,13 @@ function changeLanguage (lang) {
 
 <template lang="pug">
 section.language
-  button(v-for="(lang, i) in supportLocales" :key="`Lang${i}`" :value="lang" @click="changeLanguage(lang)" :class="{'active': locale == lang}")
+  button(
+    v-for="(lang, i) in supportLocales"
+    :key="`Lang${i}`"
+    :value="lang"
+    @click="changeLanguage(lang)"
+    :class="{'active': locale == lang}"
+  )
     img(:src="`./img/flags/${lang}.svg`" :title="lang")
     | {{ lang }}
 </template>

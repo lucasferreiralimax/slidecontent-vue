@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 
 import { mount } from '@vue/test-utils'
-import SlideContent from '../components/SlideContent.vue'
+import SlideContent from './index.vue'
 
 const wrapper = mount(SlideContent)
 

@@ -9,7 +9,7 @@ const wrapper = mount(App, {
   }
 })
 
-describe('Language', () => {
+describe('App test', () => {
   it('is App a vue instance', () => {
     expect(wrapper.exists()).toBeTruthy()
   })

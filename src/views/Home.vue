@@ -1,8 +1,9 @@
 <script setup>
 import { useI18n } from 'vue-i18n';
-import SlideContent from '../components/SlideContent.vue'
-import SlideItem from '../components/SlideItem.vue'
-import SlideSource from '../components/SlideSource.vue'
+import SlideContent from '@/components/SlideContent/index.vue';
+import SlideItem from '@/components/SlideItem/index.vue';
+import SlideSource from '@/components/SlideSource/index.vue';
+
 const { t } = useI18n();
 
 let example_1 = (faith, city) => `SlideContent(
