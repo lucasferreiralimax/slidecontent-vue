@@ -119,10 +119,11 @@ section.slide-content(ref="slideContainer" :class="[type, border ? 'border' : ''
 
 .slide-navigation
   .btn
-    background #fff
-    border 2px solid #000
+    background rgba(#fff, .3)
+    border 1px solid rgba(#000, .3)
     border-radius 100%
-    box-shadow 0 0 0 2px rgba(#fff, .5), 0 0 10px 10px rgba(#000, .5)
+    backdrop-filter blur(5px)
+    box-shadow 0 0 1px 1px rgba(#fff, .5), 0 0 10px 2px rgba(#000, .2)
     cursor pointer
     font-size 0
     font-weight bold
@@ -136,8 +137,7 @@ section.slide-content(ref="slideContainer" :class="[type, border ? 'border' : ''
     width 60px
     z-index 1
     &:hover
-      background #000
-      box-shadow 0 0 10px 10px rgba(#fff, .5)
+      background rgba(#000, .3)
       color #fff
       &:before,
       &:after
@@ -150,6 +150,13 @@ section.slide-content(ref="slideContainer" :class="[type, border ? 'border' : ''
       display flex
       height 50%
       width 5px
+    +mobile()
+      height 30px
+      width 30px
+      &:before,
+      &:after
+        width 3px
+        height 10px
   .prev
     left 10px
     &:active
@@ -158,6 +165,14 @@ section.slide-content(ref="slideContainer" :class="[type, border ? 'border' : ''
       transform rotate(45deg) translate(17px, -10px)
     &:after
       transform rotate(-45deg) translate(18px, 10px)
+    +mobile()
+      &:active
+        transform translateY(-50%) translateX(10px)
+      &:before
+        transform rotate(45deg) translate(5px, -3px)
+      &:after
+        transform rotate(-45deg) translate(6px, 2px)
+
   .next
     right 10px
     &:active
@@ -166,5 +181,12 @@ section.slide-content(ref="slideContainer" :class="[type, border ? 'border' : ''
       transform rotate(-45deg) translate(11px, 19px)
     &:after
       transform rotate(45deg) translate(11px, -19px)
+    +mobile()
+      &:active
+        transform translateY(-50%) translateX(10px)
+      &:before
+        transform rotate(45deg) translate(11px, 1px)
+      &:after
+        transform rotate(-45deg) translate(10px, 0px)
 
 </style>

@@ -41,16 +41,21 @@ export default {
   img, a
     min-width 100%
   h1
-    background rgba(#fff, .7)
+    background rgba(#fff, .2)
+    backdrop-filter blur(5px)
+    text-shadow 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff, 0 0 5px #fff
+    box-shadow 0 0 10px 5px rgba(#fff, .5)
     font-size 2em
     left 50%
-    padding .5em
+    padding .5em 0
+    margin 0
     position absolute
     text-align center
-    top 1em
-    transform translateX(-50%)
+    top 50%
+    transform translateX(-50%) translateY(-50%)
     width 100%
     z-index 1
+
 @keyframes opacityDelay
   0%
     opacity 0
