@@ -1,9 +1,4 @@
-import { vi } from 'vitest'
+import { config } from '@vue/test-utils'
+import i18n from '@/i18n'
 
-vi.mock('vue-i18n', () => {
-  return {
-    useI18n: () => ({
-      t: key => key,
-    }),
-  }
-})
+config.global.plugins = [i18n()]
