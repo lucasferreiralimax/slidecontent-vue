@@ -33,4 +33,10 @@ describe('SlideContent', () => {
     expect(wrapper.vm.border).toBeTruthy()
     expect(wrapper.classes()).toContain('border')
   })
+
+  it('is SlideContent contains squared option', async () => {
+    await wrapper.setProps({ squared: true })
+    expect(wrapper.vm.squared).toBeTruthy()
+    expect(wrapper.classes()).toContain('squared')
+  })
 })
