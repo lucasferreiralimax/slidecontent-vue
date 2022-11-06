@@ -15,7 +15,7 @@ describe('SlideFooter', () => {
 
   it('is SlideFooter contains credits', () => {
     expect(wrapper.find('.footer a').element.href).toBe('https://github.com/lucasferreiralimax/slidecontent-vue')
-    expect(wrapper.find('.footer a').text()).toBe('title@lucasferreiralimax')
+    expect(wrapper.find('.footer a').text()).toBe('SlideContentVue@lucasferreiralimax')
   })
 
   it('is SlideFooter contains svg logo Github', () => {

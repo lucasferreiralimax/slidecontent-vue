@@ -15,7 +15,7 @@ describe('SlideSource', () => {
   })
 
   it('is SlideSource contains text Código Fonte', () => {
-    expect(wrapper.find('.source h3').text()).toBe('source')
+    expect(wrapper.find('.source h3').text()).toBe('Código Fonte')
   })
 
   it('is SlideSource contains element code', () => {
