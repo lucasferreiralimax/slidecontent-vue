@@ -1,4 +1,5 @@
 <script setup>
+import { text_1, text_2, text_3 } from './textsExample.js';
 import { useI18n } from 'vue-i18n';
 import SlideContent from '@/components/SlideContent/index.vue';
 import SlideItem from '@/components/SlideItem/index.vue';
@@ -6,63 +7,9 @@ import SlideSource from '@/components/SlideSource/index.vue';
 
 const { t } = useI18n();
 
-let example_1 = (faith, city) => `SlideContent(
-  name="Exemplo 1"
-  type="infinite"
-  :nav="true"
-  :animation="{ 'disabled': true }"
-)
-  SlideItem(
-    title="${city}"
-    :img="require(\`./assets/ermelino.jpg\"
-    url="https://github.com/lucasferreiralimax/slidecontent-vue"
-    target="_blank"
-  )
-  SlideItem.favela.actived(
-    title="${faith}"
-    :img="require(\`./assets/faveladascriancas.jpg\"
-    url="https://github.com/lucasferreiralimax/slidecontent-vue"
-    target="_blank"
-  )`;
-
-let example_2 = (faith, city) => `SlideContent(
-  name="Exemplo 2"
-  type="simple"
-  :nav="false"
-)
-  SlideItem.actived(
-    title="${city}"
-    :img="require(\`./assets/ermelino.jpg\"
-    url="https://github.com/lucasferreiralimax/slidecontent-vue"
-  )
-  SlideItem.favela(
-    title="${faith}"
-    :img="require(\`./assets/faveladascriancas.jpg\"
-    url="https://github.com/lucasferreiralimax/slidecontent-vue"
-  )`;
-
-let example_3 = (faith, city) => `SlideContent(
-  name="Exemplo 3"
-  type="simple"
-  :nav="true"
-  :animation="{ direction: 'prev', time: 10000 }"
-)
-  SlideItem.actived(
-    title="${city}"
-    :img="require(\`./assets/ermelino.jpg\"
-    url="https://github.com/lucasferreiralimax/slidecontent-vue"
-    target="_blank"
-  )
-  SlideItem.favela(
-    title="${faith}"
-    :img="require(\`./assets/faveladascriancas.jpg\"
-    url="https://github.com/lucasferreiralimax/slidecontent-vue"
-    target="_blank"
-  )`;
-
-example_1 = example_1(t("god_faith"), t("city"));
-example_2 = example_2(t("god_faith"), t("city"));
-example_3 = example_3(t("god_faith"), t("city"));
+const example_1 = text_1(t("god_faith"), t("city"));
+const example_2 = text_2(t("god_faith"), t("city"));
+const example_3 = text_3(t("god_faith"), t("city"));
 </script>
 
 <template lang="pug">
