@@ -42,6 +42,9 @@ body
   color #2c3e50
   font-family 'Avenir', Helvetica, Arial, sans-serif
   text-align center
+  min-height 100vh
+  display flex
+  flex-direction column
   .logo
     text-decoration none
     color #2c3e50
