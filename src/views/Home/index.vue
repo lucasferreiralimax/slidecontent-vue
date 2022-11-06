@@ -1,5 +1,5 @@
 <script setup>
-import { text_1, text_2, text_3 } from './textsExample.js';
+import { text_1, text_2, text_3, text_4 } from './textsExample.js';
 import { useI18n } from 'vue-i18n';
 import SlideContent from '@/components/SlideContent/index.vue';
 import SlideItem from '@/components/SlideItem/index.vue';
@@ -10,6 +10,7 @@ const { t } = useI18n();
 const example_1 = text_1(t("god_faith"), t("city"));
 const example_2 = text_2(t("god_faith"), t("city"));
 const example_3 = text_3(t("god_faith"), t("city"));
+const example_4 = text_4(t("god_faith"), t("city"));
 </script>
 
 <template lang="pug">
@@ -47,6 +48,16 @@ section.page
       SlideItem.favela(:title="t('god_faith')" img="./assets/faveladascriancas.jpg" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")
     SlideSource
       pre {{ example_3 }}
+  .example
+    h2.slide-title
+      svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24")
+        path(d="M11.5 18.5a1 1 0 1 0 1 1 1 1 0 0 0-1-1Zm9-15a1 1 0 0 0-1-1h-16a1 1 0 0 0-1 1v16a1 1 0 0 0 2 0v-15h15a1 1 0 0 0 1-1Zm-5 15a1 1 0 1 0 1 1 1 1 0 0 0-1-1Zm-8 0a1 1 0 1 0 1 1 1 1 0 0 0-1-1Zm12-12a1 1 0 1 0 1 1 1 1 0 0 0-1-1Zm0 4a1 1 0 1 0 1 1 1 1 0 0 0-1-1Zm0 4a1 1 0 1 0 1 1 1 1 0 0 0-1-1Zm0 4a1 1 0 1 0 1 1 1 1 0 0 0-1-1Z")
+      span {{ t("slide_border") }}
+    SlideContent(name="Exemplo 4" type="infinite" :nav="true" border)
+      SlideItem(:title="t('city')" img="./assets/ermelino.jpg" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")
+      SlideItem.favela.actived(:title="t('god_faith')" img="./assets/faveladascriancas.jpg" url="https://github.com/lucasferreiralimax/slidecontent-vue" target="_blank")
+    SlideSource
+      pre {{ example_4 }}
 </template>
 
 <style lang="stylus">

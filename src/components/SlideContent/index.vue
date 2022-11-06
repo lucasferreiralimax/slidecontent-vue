@@ -8,7 +8,8 @@ const props = defineProps({
   name: String,
   type: String,
   nav: Boolean,
-  animation: Object
+  animation: Object,
+  border: Boolean,
 });
 
 let slideAnimationInitial = null;
@@ -86,7 +87,7 @@ function nextHandler () {
 </script>
 
 <template lang="pug">
-section.slide-content(ref="slideContainer" :class="type")
+section.slide-content(ref="slideContainer" :class="[type, border ? 'border' : '']")
   div.slide-slots
     slot
   .slide-navigation(v-if="nav")
@@ -108,6 +109,8 @@ section.slide-content(ref="slideContainer" :class="type")
   overflow hidden
   position relative
   width calc(100% - 20px)
+  &.border
+    box-shadow 0 0 0 2px #fff, 0 0 0 3px #222, 0 5px 20px rgba(0,0,0,.5)
 
 .slide-navigation
   .btn
