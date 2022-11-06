@@ -1,8 +1,8 @@
-import path from 'path'
-import vue from '@vitejs/plugin-vue'
-import vueI18n from "@intlify/vite-plugin-vue-i18n"
+import { fileURLToPath, URL } from 'node:url'
 
-const pathSrc = path.resolve(__dirname, "./src");
+import vue from '@vitejs/plugin-vue'
+
+const pathSrc = fileURLToPath(new URL('./src', import.meta.url));
 
 export default {
   test: {
@@ -12,10 +12,12 @@ export default {
       'vitest.setup.js',
     ],
   },
-  plugins: [
-    vue(),
-    vueI18n({})
-  ],
+  resolve: {
+    alias: {
+      '@': pathSrc
+    }
+  },
+  plugins: [vue()],
   css: {
     preprocessorOptions: {
       stylus: {
