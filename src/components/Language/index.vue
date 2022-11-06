@@ -19,6 +19,7 @@ function changeLanguage (lang) {
 section.language
   button(
     v-for="(lang, i) in supportLocales"
+    :data-testid="`test-${lang}`"
     :key="`Lang${i}`"
     :value="lang"
     @click="changeLanguage(lang)"
