@@ -40,6 +40,8 @@ section.source
     text-align left
     +mobile()
       font-size 0.6rem
+    @media screen and (max-width: 1020px)
+        border-radius 0
     &::selection
       color #fff
       background #53b983
