@@ -17,7 +17,7 @@
     "stylus": "^0.59.0",
     "vue": "^3.2.33",
     "vue-i18n": "^9.1.10",
-    "vue-router": "^4.0.14"
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@intlify/vite-plugin-vue-i18n": "^3.4.0",
