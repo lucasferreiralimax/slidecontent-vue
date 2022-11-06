@@ -15,6 +15,7 @@ footer.footer
 <style scoped lang="stylus">
 .footer
   padding 3em 0
+  margin-top auto
   a
     align-items center
     color #000
