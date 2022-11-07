@@ -13,4 +13,16 @@ describe('AppHeader test', () => {
   it('is AppHeader a vue instance', () => {
     expect(wrapper.exists()).toBeTruthy()
   })
+  it('AppHeader render language', () => {
+    expect(wrapper.find('.language')).toBeTruthy()
+  })
+  it('AppHeader render logo', () => {
+    expect(wrapper.find('.logo')).toBeTruthy()
+  })
+  it('AppHeader render mavigation', () => {
+    expect(wrapper.find('#nav')).toBeTruthy()
+  })
+  it('AppHeader render version', () => {
+    expect(wrapper.find('.version')).toBeTruthy()
+  })
 })
