@@ -25,7 +25,7 @@ section.language
     @click="changeLanguage(lang)"
     :class="{'active': locale == lang}"
   )
-    img(:src="`./assets/flags/${lang}.svg`" :title="lang")
+    img(:src="`./assets/flags/${lang}.svg`" :alt="lang")
     | {{ lang }}
 </template>
 

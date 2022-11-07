@@ -17,6 +17,8 @@ describe('AppLanguage', () => {
 
       expect(btn.exists()).toBeTruthy()
       expect(btn.text()).toBe(item)
+      expect(btn.find('img').element.getAttribute('alt')).toBe(item)
+      expect(btn.find('img').element.getAttribute('src')).toBe(`./assets/flags/${item}.svg`)
     })
   }
 })
