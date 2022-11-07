@@ -21,4 +21,13 @@ describe('SlideSource', () => {
   it('is SlideSource contains element code', () => {
     expect(wrapper.find('.source code').exists()).toBeTruthy()
   })
+  it('is SlideSource contains class show in code', async () => {
+    await wrapper.find('.source h3').trigger('click')
+
+    expect(wrapper.find('.source code').classes()).toContain('show')
+
+    await wrapper.find('.source h3').trigger('click')
+
+    expect(wrapper.find('.source code').classes('show')).toBe(false)
+  })
 })
