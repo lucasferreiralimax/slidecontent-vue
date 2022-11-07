@@ -10,8 +10,10 @@ describe('AppVersion test', () => {
   it('is AppVersion a vue instance', () => {
     expect(wrapper.exists()).toBeTruthy()
   })
-
   it('AppVersion validation pkg', () => {
     expect(wrapper.vm.appVersion).toBe(pkg.version)
+  })
+  it('AppVersion validation text version', () => {
+    expect(wrapper.text()).toBe(`Versão ${pkg.version}`)
   })
 })
