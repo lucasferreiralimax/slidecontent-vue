@@ -6,7 +6,7 @@ import AppLanguage from '@/components/base/AppLanguage/index.vue';
 </script>
 
 <template lang="pug">
-header
+header.header
   AppLanguage
   AppLogo
   AppVersion
