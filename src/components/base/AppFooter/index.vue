@@ -26,8 +26,11 @@ footer.footer
     font-size 1.5em
     justify-content center
     text-decoration none
+    flex-direction column
+    p
+      margin 0
     +mobile()
-      font-size .7em
+      font-size 1em
   svg
-    margin 0 .5em
+    margin .5em
 </style>
