@@ -22,7 +22,4 @@ describe('AppHeader test', () => {
   it('AppHeader render mavigation', () => {
     expect(wrapper.find('#nav')).toBeTruthy()
   })
-  it('AppHeader render version', () => {
-    expect(wrapper.find('.version')).toBeTruthy()
-  })
 })
