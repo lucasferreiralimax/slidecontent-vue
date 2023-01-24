@@ -1,4 +1,4 @@
-# Slidecontent-vue
+# slidecontent-vue
 [Live preview Project Online slidecontent-vuejs.web.app](https://slidecontent-vuejs.web.app).
 
 ## Recommended IDE Setup
@@ -52,7 +52,7 @@ npm run lint
 #### С кем вы можете поговорить о проекте?
 #### 誰がプロジェクトについて話すことができますか？
 #### À qui pouvez-vous parler du projet?
-#### Projeyle ilgili kim konuşabilirsin?
+#### Proje ile ilgili kiminle konuşabilirsin ?
 #### 你能谈谈这个项目吗？
 
 * :ghost: @lucasferreiralimax
