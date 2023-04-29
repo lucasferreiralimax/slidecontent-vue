@@ -1,6 +1,8 @@
 # slidecontent-vue
 [Live preview Project Online slidecontent-vuejs.web.app](https://slidecontent-vuejs.web.app).
 
+Project move for new repository - [https://github.com/criar-art/slidecontent-vue](https://github.com/criar-art/slidecontent-vue)
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
